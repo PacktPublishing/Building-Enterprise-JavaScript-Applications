@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ],
+  "env": {
+    "debug": {
+      "retainLines": true
+    }
+  }
+}

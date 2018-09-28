@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: backend-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  backend:
+    serviceName: backend
+    servicePort: 8100
+  rules:
+  - host: api.hobnob.social
+    http:
+      paths:
+      - backend:
+          serviceName: backend
+          servicePort: 8080
+  - host: docs.hobnob.social
+    http:
+      paths:
+      - backend:
+          serviceName: backend
+          servicePort: 8100

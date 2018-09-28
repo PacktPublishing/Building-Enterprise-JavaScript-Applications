@@ -1,0 +1,223 @@
+[
+  {
+    "email": "yyx990803@gmail.com",
+    "password": "yyx990803@gmail.com",
+    "profile": {
+      "name": {
+        "first": "Evan",
+        "last": "You",
+        "middle": ""
+      },
+      "summary": "Creator of Vue",
+      "bio": "Before creating Vue, Evan worked at Google and Meteor."
+    }
+  },
+  {
+    "email": "dan.abramov@me.com",
+    "password": "dan.abramov@me.com",
+    "profile": {
+      "name": {
+        "first": "Dan",
+        "last": "Abramov",
+        "middle": ""
+      },
+      "summary": "Co-author of Redux and Create React App",
+      "bio": "Dan now works at Facebook on their React project."
+    }
+  },
+  {
+    "email": "tj@apex.sh",
+    "password": "tj@apex.sh",
+    "profile": {
+      "name": {
+        "first": "TJ",
+        "last": "Holowaychuk",
+        "middle": ""
+      },
+      "summary": "Creator of Express and Koa",
+      "bio": "TJ's claim to fame came with Express, a minimalistic web framework for Node.js using Connect to provide a middleware layer. Later, TJ moved on to create another web framework, Koa, that extensively utilizes generators. After creating Express and Koa, TJ decided to not work on Node.js projects anymore, and moved on to focus on the Go language. Most recently, TJ founded Apex Software. In his spare time, TJ enjoys photography and art."
+    }
+  },
+  {
+    "email": "ariya.hidayat@gmail.com",
+    "password": "ariya.hidayat@gmail.com",
+    "profile": {
+      "name": {
+        "first": "Ariya",
+        "last": "Hidayat",
+        "middle": ""
+      },
+      "summary": "Creator of Esprima and PhantomJS",
+      "bio": "Ariya graduated from the Institute of Technology Bandung in Indonesia with a degree in Engineering Physics and has a doctorate in Electrical Engineering from the University of Paderborn in Germany, with a focus on fiber optic communication system. After academia, Ariya worked for 2 start-ups. Later on, Ariya created the world's first headless browser - PhantomJS. Ariya also created Esprima, the world's first JavaScript parser. He is proficient in C/C++, Node.js, Go, C#, and Kotlin, and now also works with WebKit, KDE, and Qt."
+    }
+  },
+  {
+    "email": "axel@rauschma.de",
+    "password": "axel@rauschma.de",
+    "profile": {
+      "name": {
+        "first": "Axel",
+        "last": "Rauschmayer",
+        "middle": ""
+      },
+      "summary": "Author of Exploring ES6 and Speaking JavaScript. Blogger at 2ality.",
+      "bio": "author of Exploring ES6"
+    }
+  },
+  {
+    "email": "tom@tomdale.net",
+    "password": "tom@tomdale.net",
+    "profile": {
+      "name": {
+        "first": "Tom",
+        "last": "Dale",
+        "middle": ""
+      },
+      "summary": "Creator of Ember.js",
+      "bio": "Tom currently works as a Senior Staff Software Engineer at LinkedIn."
+    }
+  },
+  {
+    "email": "mathias@chromium.org",
+    "password": "mathias@chromium.org",
+    "profile": {
+      "name": {
+        "first": "Mathias",
+        "last": "Bynens",
+        "middle": ""
+      },
+      "summary": "Engineer at Google working on the V8 JavaScript engine",
+      "bio": "Mathias also works on advancing the ECMAScript standard through the Technical Committee 39. Previously, Mathias worked in developers relations at Opera."
+    }
+  },
+  {
+    "email": "john.david.dalton@gmail.com",
+    "password": "john.david.dalton@gmail.com",
+    "profile": {
+      "name": {
+        "first": "John-David",
+        "last": "Dalton",
+        "middle": ""
+      },
+      "summary": "Creator of Lodash",
+      "bio": "John-David is the creator of Lodash, a JavaScript utility library. John-David currently works as the Web Apps & Frameworks Product Manager for Microsoft."
+    }
+  },
+  {
+    "email": "SachaG@users.noreply.github.com",
+    "password": "SachaG@users.noreply.github.com",
+    "profile": {
+      "name": {
+        "first": "Sacha",
+        "last": "Greif",
+        "middle": ""
+      },
+      "summary": "Creator of Telescope and State of JavaScript",
+      "bio": "Sacha is a designer, developer, and entrepreneur from Paris. Sacha's claim to fame began with his involvement with Meteor, when he wrote one of the first books on the topic - Discover Meteor. He then went on to create Telescope - an open-source Reddit-like platform built with React, GraphQL and Meteor. He now focuses more generally on JavaScript and create a survey - State of JavaScript - that keeps track of the latest trends in JavaScript."
+    }
+  },
+  {
+    "email": "david@davidwalsh.name",
+    "password": "david@davidwalsh.name",
+    "profile": {
+      "name": {
+        "first": "David",
+        "last": "Walsh",
+        "middle": ""
+      },
+      "summary": "Senior Web Developer at Mozilla",
+      "bio": "David is also a Core Developer at MooTools, and blogs regularly at davidwalsh.name"
+    }
+  },
+  {
+    "email": "kent@doddsfamily.us",
+    "password": "kent@doddsfamily.us",
+    "profile": {
+      "name": {
+        "first": "Kent",
+        "last": "Dodds",
+        "middle": "C"
+      },
+      "summary": "Fullstack JavaScript engineer at PayPal",
+      "bio": "Kent hosts JavaScript Air, a live podcast about JavaScript and web."
+    }
+  },
+  {
+    "email": "BrendanEich@users.noreply.github.com",
+    "password": "BrendanEich@users.noreply.github.com",
+    "profile": {
+      "name": {
+        "first": "Brendan",
+        "last": "Eich",
+        "middle": ""
+      },
+      "summary": "Creator of JavaScript and Co-Founder of Mozilla and Firefox",
+      "bio": "Brendan Eich grew up in Palo Alto and graduated from Santa Clara University with a  bachelor's degree in mathematics and computer science. He then went on to study for a master's degree at University of Illinois at Urbana-Champaign. In 1995, Brendan started working for Netscape, where he originally intended to develop a browser that uses the Scheme language. However, Brendan's superiors wanted to use a language that is more similar to Java. The end result is a new language - JavaScript - which carries much of the functionality of Scheme, but the syntax of Java. Then, in 1998, Brendan co-founded the Mozilla project that is intended to manage open-source contributions to the Netscape browser. Currently, Brendan is the CEO of Brave, an Internet security company which developed the Brave web browser."
+    }
+  },
+  {
+    "email": "sindresorhus@gmail.com",
+    "password": "sindresorhus@gmail.com",
+    "profile": {
+      "name": {
+        "first": "Sindre",
+        "last": "Sorhus",
+        "middle": ""
+      },
+      "summary": "Open-Source Node.js and Swift developer",
+      "bio": "Sindre grew up in a suburban area outside Oslo, Norway. After high school, Sindre spent 5 years in the Norwegian military's media unit as a front-end developer. Creator of the AVA testing framework, the Awesome Lists, and Chalk. Sindre is also a major contributor to Yeoman and TodoMVC. The author of over 1000 JavaScript modules, Sindre follows the Unix philosophy of 'Do one thing and do it well', and focuses on creating small, focused modules, and composing them to perform more complex tasks. Since launching his Patreon page, Sindre is now a full-time open-source developer funded by the open-source community."
+    }
+  },
+  {
+    "email": "addyosmani@gmail.com",
+    "password": "addyosmani@gmail.com",
+    "profile": {
+      "name": {
+        "first": "Addy",
+        "last": "Osmani",
+        "middle": ""
+      },
+      "summary": "Engineering manager at Google working on Google Chrome",
+      "bio": "Addy is an engineering manager at Google and is involved in many projects, including Chrome developer tools, Progressive Web Apps, Polymer, Lighthouse, and Workbox. Outside of Google, Addy also created Yeoman, TodoMVC and Material Design Lite. Addy is also the author of the books 'Learning JavaScript Design Patterns', 'Backbone.js Apps' and 'Essential Image Optimization'."
+    }
+  },
+  {
+    "email": "jeresig@gmail.com",
+    "password": "jeresig@gmail.com",
+    "profile": {
+      "name": {
+        "first": "John",
+        "last": "Resig",
+        "middle": ""
+      },
+      "summary": "Creator and lead developer for jQuery",
+      "bio": "John graduated with an undergraduate degree in Computer Science from Rochester Institute of Technology in 2005. John currently works at Khan Academy as the Frontend Architect. He’s also the author of the JavaScript books titled 'Secrets of the JavaScript Ninja' and 'Pro JavaScript Techniques'."
+    }
+  },
+  {
+    "email": "paul.irish@gmail.com",
+    "password": "paul.irish@gmail.com",
+    "profile": {
+      "name": {
+        "first": "Paul",
+        "last": "Irish",
+        "middle": ""
+      },
+      "summary": "Front-end Developer at Google working on Google Chrome",
+      "bio": "Paul's work focuses on Web Performance, and works on the Lighthouse and Google Chrome developer tools."
+    }
+  },
+  {
+    "email": "chriscoyier@gmail.com",
+    "password": "chriscoyier@gmail.com",
+    "profile": {
+      "name": {
+        "first": "Chris",
+        "last": "Coyier",
+        "middle": ""
+      },
+      "summary": "Creator of CSS-Tricks. Co-founder of Codepen",
+      "bio": "Chris is the creator of CSS-Tricks, a website dedicated to web design. Chris also co-founded Codepen.io - an online playground for front-end code. Chris also co-host the ShopTalk, a podcast that focuses on front-end web design, development, and UX."
+    }
+  }
+]

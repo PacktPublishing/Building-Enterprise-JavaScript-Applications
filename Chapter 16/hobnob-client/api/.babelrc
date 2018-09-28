@@ -1,0 +1,17 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ],
+  "env": {
+    "debug": {
+      "retainLines": true
+    },
+    "test": {
+      "plugins": ["babel-plugin-rewire"]
+    }
+  }
+}

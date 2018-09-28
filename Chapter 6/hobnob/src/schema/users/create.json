@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "http://api.hobnob.social/schemas/users/create.json",
+  "title": "Create User Schema",
+  "description": "For validating client-provided create user object",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "password": { "type": "string" },
+    "profile": { "$ref": "profile.json#"}
+  },
+  "required": ["email", "password"],
+  "additionalProperties": false
+}

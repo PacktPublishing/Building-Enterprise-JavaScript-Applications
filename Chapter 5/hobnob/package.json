@@ -1,0 +1,38 @@
+{
+  "name": "hobnob",
+  "version": "0.1.0",
+  "description": "Back end for a simple user directory API with recommendation engine",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && babel src -d dist",
+    "serve": "yarn run build && dotenv node dist/index.js",
+    "test:e2e": "./scripts/e2e.test.sh",
+    "watch": "nodemon -w src --exec yarn run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d4nyll/hobnob.git"
+  },
+  "author": "Daniel Li <dan@danyll.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d4nyll/hobnob/issues"
+  },
+  "homepage": "https://github.com/d4nyll/hobnob#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "cucumber": "^3.2.1",
+    "dotenv-cli": "^1.4.0",
+    "nodemon": "^1.12.1",
+    "rimraf": "^2.6.2",
+    "superagent": "^3.8.2"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "elasticsearch": "^14.0.0",
+    "express": "^4.16.2"
+  }
+}

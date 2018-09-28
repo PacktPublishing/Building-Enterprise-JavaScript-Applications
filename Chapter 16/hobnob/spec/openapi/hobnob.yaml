@@ -1,0 +1,363 @@
+openapi: "3.0.0"
+info:
+  title: Hobnob User Directory
+  version: "1.0.0"
+  contact:
+    name: Support
+    email: dan@danyll.com
+servers:
+  - url: http://localhost:8080/
+    description: Local Development Server
+tags:
+  - name: Authentication
+    description: Authentication-related endpoints
+  - name: Users
+    description: User-related endpoints
+  - name: Profile
+    description: Profile-related endpoints
+components:
+  schemas:
+    Error:
+      properties:
+        message:
+          description: Error message
+          type: string
+    Profile:
+      title: User Profile
+      type: object
+      properties:
+        bio:
+          type: string
+        summary:
+          type: string
+        name:
+          type: object
+          properties:
+            first:
+              type: string
+            middle:
+              type: string
+            last:
+              type: string
+      additionalProperties: false
+    User:
+      title: User Schema
+      properties:
+        email:
+          type: string
+          format: email
+        digest:
+          type: string
+          pattern: ^\\$2[aby]?\\$\\d{1,2}\\$[.\\/A-Za-z0-9]{53}$
+        profile:
+          $ref: '#/components/schemas/Profile'
+      additionalProperties: false
+      required:
+        - email
+        - digest
+      example:
+        email: e@ma.il
+        digest: $2a$10$enCaroMp4gMvEmvCe4EuP.0d5FZ6yc0yUuSJ0pQTt4EO5MXvonUTm
+        profile:
+          bio: Daniel is a species of JavaScript developer that is commonly found in Hong Kong and London. Daniel's developer life started off with working in digital agencies in Hong Kong, working with languages such as PHP, C#.NET and JavaScript. Soon after, Daniel opened his own digital agency called Brew, which specialized in the Meteor framework.
+          summary: JavaScript Developer
+          name:
+            first: Daniel
+            last: Li
+    UserLimited:
+      title: Retrieve User Response Payload Schema
+      description: An User object with the digest field removed
+      properties:
+        email:
+          type: string
+          format: email
+        profile:
+          $ref: '#/components/schemas/Profile'
+      additionalProperties: false
+      required:
+        - email
+        - digest
+      example:
+        email: e@ma.il
+        profile:
+          bio: Daniel is a species of JavaScript developer that is commonly found in Hong Kong and London. Daniel's developer life started off with working in digital agencies in Hong Kong, working with languages such as PHP, C#.NET and JavaScript. Soon after, Daniel opened his own digital agency called Brew, which specialized in the Meteor framework.
+          summary: JavaScript Developer
+          name:
+            first: Daniel
+            last: Li
+  responses:
+    Success:
+      description: Success
+    Created:
+      description: Created
+      content:
+        text/plain:
+          schema:
+            type: string
+    LoginSuccess:
+      description: Logged In Successfully
+      content:
+        text/plain:
+          schema:
+            type: string
+    SaltRetrieved:
+      description: Salt Retrieved
+      content:
+        text/plain:
+          schema:
+            type: string
+    UserRetrieved:
+      description: User Retrieved
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UserLimited'
+    UsersRetrieved:
+      description: Users Retrieved from Search Operation
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/UserLimited'
+    ErrorBadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    ErrorUnauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    ErrorForbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    ErrorNotFound:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    ErrorUnsupportedMediaType:
+      description: Unsupported Media Type
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    ErrorInternalServer:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  securitySchemes:
+    token:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+paths:
+  /login/:
+    post:
+      tags:
+        - Authentication
+      summary: Perform password-based authentication
+      description: Returns a JWT upon success
+      requestBody:
+        description: User Credentials
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                email:
+                  type: string
+                  format: email
+                digest:
+                  type: string
+                  pattern: ^\\$2[aby]?\\$\\d{1,2}\\$[.\\/A-Za-z0-9]{53}$
+      responses:
+        '200':
+          $ref: '#/components/responses/LoginSuccess'
+        '400':
+          $ref: '#/components/responses/ErrorBadRequest'
+        '401':
+          $ref: '#/components/responses/ErrorUnauthorized'
+        '500':
+          $ref: '#/components/responses/ErrorInternalServer'
+  /salt/:
+    get:
+      tags:
+        - Authentication
+      summary: Returns the salt of an user based on the user's email
+      description: Even if there are no users with the specified email, this endpoint will still return with a salt. This is to prevent the API leaking information about which email addresses are used to register on the platform.
+      parameters:
+        - name: email
+          in: query
+          description: The email of user to retrieve the salt for
+          required: true
+          schema:
+            type: string
+            format: email
+      responses:
+        '200':
+          $ref: '#/components/responses/SaltRetrieved'
+        '400':
+          $ref: '#/components/responses/ErrorBadRequest'
+        '500':
+          $ref: '#/components/responses/ErrorInternalServer'
+  /users/:
+    get:
+      tags:
+        - Users
+      summary: Search for a User using query string
+      parameters:
+        - name: query
+          in: query
+          description: The term to query for
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/UsersRetrieved'
+        '400':
+          $ref: '#/components/responses/ErrorBadRequest'
+        '500':
+          $ref: '#/components/responses/ErrorInternalServer'
+    post:
+      tags:
+        - Users
+      summary: Creates a New User
+      requestBody:
+        description: The New User object
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        '201':
+          $ref: '#/components/responses/Created'
+        '400':
+          $ref: '#/components/responses/ErrorBadRequest'
+        '415':
+          $ref: '#/components/responses/ErrorUnsupportedMediaType'
+        '500':
+          $ref: '#/components/responses/ErrorInternalServer'
+  /users/{userId}:
+    get:
+      tags:
+        - Users
+      summary: Retrieves details of a single User
+      parameters:
+        - name: userId
+          in: path
+          description: ID of the User to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/UserRetrieved'
+        '400':
+          $ref: '#/components/responses/ErrorBadRequest'
+        '404':
+          $ref: '#/components/responses/ErrorNotFound'
+        '500':
+          $ref: '#/components/responses/ErrorInternalServer'
+    delete:
+      tags:
+        - Users
+      summary: Deletes a User
+      security:
+        - token: []
+      parameters:
+        - name: userId
+          in: path
+          description: ID of the User to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/UserRetrieved'
+        '400':
+          $ref: '#/components/responses/ErrorBadRequest'
+        '403':
+          $ref: '#/components/responses/ErrorForbidden'
+        '404':
+          $ref: '#/components/responses/ErrorNotFound'
+        '500':
+          $ref: '#/components/responses/ErrorInternalServer'
+  /users/{userId}/profile:
+    patch:
+      tags:
+        - Profile
+      summary: Update the Profile of the User
+      security:
+        - token: []
+      parameters:
+        - name: userId
+          in: path
+          description: ID of the User
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: An object representing the fields in the Profile to update
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Profile"
+      responses:
+        '200':
+          $ref: '#/components/responses/Success'
+        '400':
+          $ref: '#/components/responses/ErrorBadRequest'
+        '401':
+          $ref: '#/components/responses/ErrorUnauthorized'
+        '404':
+          $ref: '#/components/responses/ErrorNotFound'
+        '415':
+          $ref: '#/components/responses/ErrorUnsupportedMediaType'
+        '500':
+          $ref: '#/components/responses/ErrorInternalServer'
+    put:
+      tags:
+        - Profile
+      summary: Replaces the Profile of the User with a new Profile
+      security:
+        - token: []
+      parameters:
+        - name: userId
+          in: path
+          description: ID of the User
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: The New Profile object
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Profile"
+      responses:
+        '200':
+          $ref: '#/components/responses/Success'
+        '400':
+          $ref: '#/components/responses/ErrorBadRequest'
+        '401':
+          $ref: '#/components/responses/ErrorUnauthorized'
+        '404':
+          $ref: '#/components/responses/ErrorNotFound'
+        '415':
+          $ref: '#/components/responses/ErrorUnsupportedMediaType'
+        '500':
+          $ref: '#/components/responses/ErrorInternalServer'

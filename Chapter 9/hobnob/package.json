@@ -1,0 +1,57 @@
+{
+  "name": "hobnob",
+  "version": "0.1.0",
+  "description": "Back end for a simple user directory API with recommendation engine",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && babel src -d dist --copy-files",
+    "serve": "yarn run build && dotenv node dist/index.js",
+    "test": "yarn run test:unit && yarn run test:integration && yarn run test:e2e",
+    "test:integration": "export NODE_ENV=test; dotenv mocha -- 'src/**/*.integration.test.js' --require babel-register",
+    "test:integration:coverage": "nyc --reporter=html --reporter=text yarn run test:integration",
+    "test:unit": "export NODE_ENV=test; dotenv mocha -- 'src/**/*.unit.test.js' --require babel-register",
+    "test:unit:coverage": "nyc --reporter=html --reporter=text yarn run test:unit",
+    "test:e2e": "./scripts/e2e.test.sh",
+    "watch": "nodemon -w src --exec yarn run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d4nyll/hobnob.git"
+  },
+  "author": "Daniel Li <dan@danyll.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d4nyll/hobnob/issues"
+  },
+  "homepage": "https://github.com/d4nyll/hobnob#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-rewire": "^1.1.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chance": "^1.0.13",
+    "cucumber": "^3.2.1",
+    "dotenv-cli": "^1.4.0",
+    "dotenv-export": "^2.0.0",
+    "jsonfile": "^4.0.0",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.isequal": "^4.5.0",
+    "mocha": "^5.0.0",
+    "nodemon": "^1.12.1",
+    "nyc": "^11.4.1",
+    "object-path": "^0.11.4",
+    "rimraf": "^2.6.2",
+    "sinon": "^4.2.2",
+    "superagent": "^3.8.2"
+  },
+  "dependencies": {
+    "ajv": "^6.1.0",
+    "babel-polyfill": "^6.26.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "elasticsearch": "^14.1.0",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.2.0",
+    "random-seed": "^0.3.0"
+  }
+}

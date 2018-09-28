@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "http://api.hobnob.social/schemas/users/profile.json",
+  "title": "User Profile Schema",
+  "description": "For validating client-provided user profile object when creating and/or updating an user",
+  "type": "object",
+  "properties": {
+    "bio": { "type": "string" },
+    "summary": { "type": "string" },
+    "name": {
+      "type": "object",
+      "properties": {
+        "first": { "type": "string" },
+        "last": { "type": "string" },
+        "middle": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
