@@ -64,9 +64,9 @@ With the following software and hardware list you can run all code files present
 
 
 ### Related products <Other books you may enjoy>
-* Linux: Powerful Server Administration [[Packt]](https://www.packtpub.com/networking-and-servers/linux-powerful-server-administration?utm_source=github&utm_medium=repository&utm_campaign=9781788293778) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* Full-Stack React Projects [[Packt]](https://www.packtpub.com/web-development/full-stack-react-projects?utm_source=github&utm_medium=repository&utm_campaign=9781788835534) [[Amazon]](https://www.amazon.com/dp/1788835530)
 
-* Linux Device Drivers Development [[Packt]](https://www.packtpub.com/networking-and-servers/linux-device-drivers-development?utm_source=github&utm_medium=repository&utm_campaign=9781785280009) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* React Cookbook [[Packt]](https://www.packtpub.com/web-development/react-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781783980727) [[Amazon]](https://www.amazon.com/dp/1783980729)
 
 ## Get to Know the Author
 **Daniel Li**
@@ -74,10 +74,6 @@ is a full-stack JavaScript developer at Nexmo. Previously, he was also the Manag
 
 A proponent of knowledge-sharing and open source, Daniel has written over 100 blog posts and in-depth tutorials, helping hundreds of thousands of readers navigate the world of JavaScript and the web.
 
-
-## Other books by the authors
-* [Full-Stack React Projects](https://www.packtpub.com/web-development/full-stack-react-projects?utm_source=github&utm_medium=repository&utm_campaign=9781788835534)
-* [React Cookbook](https://www.packtpub.com/web-development/react-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781783980727)
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
