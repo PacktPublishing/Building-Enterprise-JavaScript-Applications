@@ -68,12 +68,11 @@ With the following software and hardware list you can run all code files present
 
 * Linux Device Drivers Development [[Packt]](https://www.packtpub.com/networking-and-servers/linux-device-drivers-development?utm_source=github&utm_medium=repository&utm_campaign=9781785280009) [[Amazon]](https://www.amazon.com/dp/1788293770)
 
-## Get to Know the Author(s)
-**Author Name**
-Bio
+## Get to Know the Author
+**Daniel Li**
+is a full-stack JavaScript developer at Nexmo. Previously, he was also the Managing Director of Brew, a digital agency in Hong Kong that specializes in MeteorJS.
 
-**Author Name**
-Bio
+A proponent of knowledge-sharing and open source, Daniel has written over 100 blog posts and in-depth tutorials, helping hundreds of thousands of readers navigate the world of JavaScript and the web.
 
 
 ## Other books by the authors
