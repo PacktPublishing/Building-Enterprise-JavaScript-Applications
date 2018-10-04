@@ -5,12 +5,12 @@ Building Enterprise JavaScript Applications, published by Packt
 
 This is the code repository for [Building Enterprise JavaScript Applications](https://www.packtpub.com/web-development/building-enterprise-javascript-applications), published by Packt.
 
-**Subtitle from EPIC**
+**Learn to build and deploy robust JavaScript applications using Cucumber, Mocha, Jenkins, Docker, and Kubernetes**
 
 ## What is this book about?
 With the over-abundance of tools in the JavaScript ecosystem, it's easy to feel lost. Build tools, package managers, loaders, bundlers, linters, compilers, transpilers, typecheckers - how do you make sense of it all?
 
-This book covers the following exciting features: <First 5 What you'll learn points>
+This book covers the following exciting features: 
 * Practice Test-Driven Development (TDD) throughout the entire book
 * Use Cucumber, Mocha and Selenium to write E2E, integration, unit and UI tests
 * Build stateless APIs using Express and Elasticsearch
