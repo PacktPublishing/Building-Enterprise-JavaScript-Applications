@@ -6,6 +6,8 @@ function getValidPayload (type) {
         email: 'e@ma.il',
         password: 'password'
       };
+    default:
+      return undefined;
   }
 }
 
