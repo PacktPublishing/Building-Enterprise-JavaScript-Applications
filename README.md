@@ -6,7 +6,10 @@ Building Enterprise JavaScript Applications, published by Packt
 
 This is the official code repository for [Building Enterprise JavaScript Applications](https://www.packtpub.com/web-development/building-enterprise-javascript-applications), published by Packt.
 
-However, I recommend that you use the unofficial, author-maintained repositories at [`d4nyll/hobnob`](https://github.com/d4nyll/hobnob) and [`d4nyll/hobnob-client`](https://github.com/d4nyll/hobnob-client).
+* Chapters 1-3 outlines pre-requisite information and contains no code at all.
+* In chapters 4-13, we build our backend API from scratch. It's recommended that you use download the [`d4nyll/hobnob`](https://github.com/d4nyll/hobnob) repository and follow along. The starting and finishing point of each chapter can be found as [Git tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) on the [**Releases**](https://github.com/d4nyll/hobnob/releases) page of the repository.
+* In chapters 14-16, we build a very simple frontend client from scratch. The instructions should be easy to follow, but you can find the end product under [`Chapter17/hobnob-client`](https://github.com/PacktPublishing/Building-Enterprise-JavaScript-Applications/tree/master/Chapter17/hobnob-client).
+* In chapters 17-18, we deploy our application using Docker and Kubernetes. The end product of these two chapters can be found under [`Chapter17/hobnob-deploy`](https://github.com/PacktPublishing/Building-Enterprise-JavaScript-Applications/tree/master/Chapter17/hobnob-deploy)
 
 **Learn to build and deploy robust JavaScript applications using Cucumber, Mocha, Jenkins, Docker, and Kubernetes**
 
