@@ -1,9 +1,12 @@
-# Building-Enterprise-JavaScript-Applications
+# Building Enterprise JavaScript Applications (BEJA)
+
 Building Enterprise JavaScript Applications, published by Packt
 
 <a href="https://www.packtpub.com/web-development/building-enterprise-javascript-applications"><img src="https://www.packtpub.com/sites/default/files/cover%20-%20Copy_8514.png" alt="Book Name" height="256px" align="right"></a>
 
-This is the code repository for [Building Enterprise JavaScript Applications](https://www.packtpub.com/web-development/building-enterprise-javascript-applications), published by Packt.
+This is the official code repository for [Building Enterprise JavaScript Applications](https://www.packtpub.com/web-development/building-enterprise-javascript-applications), published by Packt.
+
+However, I recommend that you use the unofficial, author-maintained repositories at [`d4nyll/hobnob`](https://github.com/d4nyll/hobnob) and [`d4nyll/hobnob-client`](https://github.com/d4nyll/hobnob-client).
 
 **Learn to build and deploy robust JavaScript applications using Cucumber, Mocha, Jenkins, Docker, and Kubernetes**
 
@@ -69,8 +72,8 @@ With the following software and hardware list you can run all code files present
 * React Cookbook [[Packt]](https://www.packtpub.com/web-development/react-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781783980727) [[Amazon]](https://www.amazon.com/dp/1783980729)
 
 ## Get to Know the Author
-**Daniel Li**
-is a full-stack JavaScript developer at Nexmo. Previously, he was also the Managing Director of Brew, a digital agency in Hong Kong that specializes in MeteorJS.
+
+[**Daniel Li**](https://github.com/d4nyll) is a DevOps Engineer and Full-stack JavaScript Developer at [Nexmo](https://www.nexmo.com/). Previously, he was also the Managing Director of [Brew](brew.com.hk), a digital agency in Hong Kong that specializes in [MeteorJS](https://meteor.com).
 
 A proponent of knowledge-sharing and open source, Daniel has written over 100 blog posts and in-depth tutorials, helping hundreds of thousands of readers navigate the world of JavaScript and the web.
 
